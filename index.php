@@ -1,80 +1,61 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>My Contact Form</title>
-</head>
-<body>
-    <header class="main">
-        <h1>My Contact Form</h1>
-    </header>
-    <section class="main">
-        
-        <?php
-       $name = $_POST['name'];
-       $email = $_POST['email'];
-       $message = $_POST['message'];
-       $from = 'From: My Contact Form';
-       $to = 'info@srcsync.com';
-       $subject = 'Online Inquiry';
+<?php
+if(!isset($_POST['submit']))
+{
+	//This page should not be accessed directly. Need to submit the form.
+	echo "error; you need to submit the form!";
+}
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
 
-       $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+//Validate first
+if(empty($name)||empty($visitor_email)) 
+{
+    echo "Name and email are mandatory!";
+    exit;
+}
 
-       if ($_POST['submit']) {
-           if (mail ($to, $subject, $body, $from)) {
-           echo '<p>Message Sent Successfully!</p>';
-           } else {
-           echo '<p>Ah! Try again, please?</p>';
-           }
-       	  }
-    	?>
+if(IsInjected($visitor_email))
+{
+    echo "Bad email value!";
+    exit;
+}
 
-        <form method="post" action="index.php">						
+$email_from = 'info@srcsync.com';//<== update the email address
+$email_subject = "New Form submission";
+$email_body = "You have received a new message from the user $name.\n".
+    "Here is the message:\n $message".
+    
+$to = "info@srcsync.com";//<== update the email address
+$headers = "From: $email_from \r\n";
+$headers .= "Reply-To: $email \r\n";
+//Send the email!
+mail($to,$email_subject,$email_body,$headers);
+//done. redirect to thank-you page.
+header('Location: thank-you.html');
 
-							<fieldset>
-								<div class="clearfix">
-									<label for="name"><span>Name:</span></label>
-									<div class="input">
-										<input tabindex="1" size="18" id="name" name="name" type="text" value="">
-									</div>
-								</div>
-								<!--Hide Company Name--
-								<div class="clearfix">
-									<label for="name"><span>Company Name:</span></label>
-									<div class="input">
-										<input tabindex="1" size="18" id="name" name="company" type="text" value="">
-									</div>
-								</div>
-								<!--Hide Company Name-->
-								<!--Hide Phone
-								<div class="clearfix">
-									<label for="name"><span>Phone:</span></label>
-									<div class="input">
-										<input tabindex="1" size="18" id="name" name="phone" type="text" value="">
-									</div>
-								</div>
-								<!--Hide Phone-->
-								<div class="clearfix">
-									<label for="email"><span>Email:</span></label>
-									<div class="input">
-										<input tabindex="2" size="25" id="email" name="email" type="text" value="" class="input-xlarge">
-									</div>
-								</div>
 
-								<div class="clearfix">
-									<label for="message"><span>Message:</span></label>
-									<div class="input">
-										<textarea tabindex="3" class="input-xlarge" id="message" name="body" rows="7"></textarea>
-									</div>
-								</div>
-
-								<div class="actions">
-									<button tabindex="3" type="submit" class="btn btn-succes btn-large">Send message</button>
-								</div>
-							</fieldset>
-
-		</form>
-
-    </section>
-</body>
-</html>
+// Function to validate against any email injection attempts
+function IsInjected($str)
+{
+  $injections = array('(\n+)',
+              '(\r+)',
+              '(\t+)',
+              '(%0A+)',
+              '(%0D+)',
+              '(%08+)',
+              '(%09+)'
+              );
+  $inject = join('|', $injections);
+  $inject = "/$inject/i";
+  if(preg_match($inject,$str))
+    {
+    return true;
+  }
+  else
+    {
+    return false;
+  }
+}
+   
+?> 
