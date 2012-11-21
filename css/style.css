@@ -1,6 +1,12 @@
 /*
 * Author: Łukasz Holeczek
-* Template: Best. Bootstrap Theme
+* Template: Magnus Bootstrap Theme
+* Version: 1.0.3
+* Bootstrap version: 2.2.1
+* Copyright 2012 creativeLabs
+* www: http://clabs.co
+* mail: lukasz@clabs.co
+* You can buy this theme on WrapBootstrap: https://wrapbootstrap.com/theme/magnus-responsive-business-template-WB0C44S9M
 */
 
 
@@ -331,8 +337,8 @@ header {
 
 .navbar .btn-navbar {
 	position: absolute;
-	right: 50px;
-	top: 15px;
+	right: 25px;
+	top: 25px;
 }
 
 .nav .active .dropdown-toggle .caret {
@@ -715,7 +721,6 @@ html[xmlns] .slides {display: block;}
 }
 
 .icons-box p {
-	text-align: left;
 	float: left;
 }
 
@@ -1597,6 +1602,16 @@ a.buy:hover {
 /* Google Map
 =================================================================== */
 
+#mobileOverlay {
+	position: relative;
+	z-index: 2;
+	height: 550px;
+	width: 100%;
+	background: transparent;
+	margin-top: -550px;
+	opacity: 0;
+}
+
 #googlemaps{
 	position: relative;
 	z-index: 1;
@@ -2162,6 +2177,10 @@ form#newsletter input[type=submit] {
 	text-shadow: 0px -1px 1px #222;
 }
 
+#copyright a {
+	color: #555;
+}
+
 /* Links List
 =================================================================== */
 .links-list li a {
@@ -2431,6 +2450,10 @@ form#newsletter input[type=submit] {
 ====================================================================== */
 @media (min-width: 1200px) {
 	
+	#mobileOverlay {
+		display: none;
+	}
+	
 }
 
 /* Higher than 960 (desktop devices)
@@ -2460,6 +2483,10 @@ form#newsletter input[type=submit] {
 	
 	.flexslider.home {
 		min-height: 300px;
+	}
+	
+	#mobileOverlay {
+		display: none;
 	}
 
 }
@@ -2494,6 +2521,10 @@ form#newsletter input[type=submit] {
 	
 	ol li ol.childlist .comment-des {
 		width:86%;
+	}
+	
+	#mobileOverlay {
+		display: none;
 	}
 	
 }
@@ -2542,12 +2573,31 @@ form#newsletter input[type=submit] {
 		margin-bottom: 30px;
 	}
 	
+	#mobileOverlay {
+		display: visible !important;
+	}
+	
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers)
 ====================================================================== */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	
+	body {
+		padding: 0px 5px 0px 5px;
+	}
+	
+	header {
+		padding: 0px 20px !important;
+	}
+	
+	#wrapper,
+	#footer,
+	#footer-menu,
+	#copyright {
+		overflow: hidden;
+		padding: 0px 10px;
+	}
 
 	.nav {
 		background: #fff !important;
@@ -2559,8 +2609,8 @@ form#newsletter input[type=submit] {
 		background: #fff !important;
 		border-top:4px solid transparent;
 		text-shadow: none;
-		font-size: 12px;
-		padding: 0px 10px;
+		font-size: 14px;
+		padding: 5px 20px;
 		-webkit-transition: all 0.3s ease-in-out;
 		-moz-transition: all 0.3s ease-in-out;
 		-o-transition: all 0.3s ease-in-out;
@@ -2569,10 +2619,8 @@ form#newsletter input[type=submit] {
 
 	}
 
-	
-		
 	.logo  {
-		margin-left: 20px;
+		margin-left: 0px;
 	}
 		
 	.flickr-widget a {
@@ -2588,10 +2636,30 @@ form#newsletter input[type=submit] {
 		width:83%;
 	}
 	
+	#mobileOverlay {
+		display: visible !important;
+	}
+	
 }
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
 =================================================================== */
 @media only screen and (max-width: 479px) {
+	
+	body {
+		padding: 0px 2px 0px 2px;
+	}
+	
+	header {
+		padding: 0px 20px !important;
+	}
+	
+	#wrapper,
+	#footer,
+	#footer-menu,
+	#copyright {
+		overflow: hidden;
+		padding: 0px 10px;
+	}
 	
 	.nav {
 		background: #fff !important;
@@ -2603,8 +2671,8 @@ form#newsletter input[type=submit] {
 		background: #fff !important;
 		border-top:4px solid transparent;
 		text-shadow: none;
-		font-size: 12px;
-		padding: 0px 10px;
+		font-size: 14px;
+		padding: 5px 20px;
 		-webkit-transition: all 0.3s ease-in-out;
 		-moz-transition: all 0.3s ease-in-out;
 		-o-transition: all 0.3s ease-in-out;
@@ -2614,7 +2682,7 @@ form#newsletter input[type=submit] {
 	}
 
 	.logo  {
-		margin-left: 20px;
+		margin-left: 0px;
 	}
 		
 	ol li ol.childlist .comment-des {
@@ -2624,6 +2692,11 @@ form#newsletter input[type=submit] {
 	.comment-des{
 		width:78%;
 	}
+	
+	#mobileOverlay {
+		display: visible !important;
+	}
+	
 	
 }
 	

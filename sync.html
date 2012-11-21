@@ -37,7 +37,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!--start: Google Analytics-->
+ <!--start: Google Analytics-->
 	<script type="text/javascript">
 
   	var _gaq = _gaq || [];
@@ -114,6 +114,7 @@
 		<!-- starts: Google Maps -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<div id="googlemaps" class="google-map google-map-full"></div>
+		<div id="mobileOverlay"></div>
 		<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 		<script src="js/jquery.gmap.min.js"></script>
 		<script type="text/javascript">
@@ -129,6 +130,7 @@
 				maptype: 'ROADMAP',
 				scrollwheel: false,
 				zoom: 13,
+				
 				markers: [
 					{
 						address: '14 N. Peoria St. Chicago, IL 60607', // Your Adress Here
@@ -137,7 +139,6 @@
 					}
 
 				],
-
 			});
 		</script>
 		<!-- end: Google Maps -->
@@ -179,14 +180,13 @@
 				<!-- end: Contact Info -->		
 
 				<!-- start: Contact Form -->
-
 				<div class="span4">
 					<div class="title-out"><h3>Contact Form</h3></div>
 
 					<!-- start: Contact Form -->
-					<div id="contact-form">	
-						
-						<form method="post" action="index.php">						
+					<div id="contact-form">
+
+						<form method="post" action="">
 
 							<fieldset>
 								<div class="clearfix">
@@ -195,22 +195,7 @@
 										<input tabindex="1" size="18" id="name" name="name" type="text" value="">
 									</div>
 								</div>
-								<!--Hide Company Name--
-								<div class="clearfix">
-									<label for="name"><span>Company Name:</span></label>
-									<div class="input">
-										<input tabindex="1" size="18" id="name" name="company" type="text" value="">
-									</div>
-								</div>
-								<!--Hide Company Name-->
-								<!--Hide Phone
-								<div class="clearfix">
-									<label for="name"><span>Phone:</span></label>
-									<div class="input">
-										<input tabindex="1" size="18" id="name" name="phone" type="text" value="">
-									</div>
-								</div>
-								<!--Hide Phone-->
+
 								<div class="clearfix">
 									<label for="email"><span>Email:</span></label>
 									<div class="input">
@@ -231,7 +216,7 @@
 							</fieldset>
 
 						</form>
-						
+
 					</div>
 					<!-- end: Contact Form -->
 
@@ -241,14 +226,14 @@
 				<!-- start: Social Sites -->
 				<div class="span5">
 					<div class="title-out"><h3>Follow US!</h3></div>
-					<ul class="social-bookmarks">						
+					<ul class="social-bookmarks">
 						<li class="facebook"><a href="https://www.facebook.com">facebook</a></li>
 						<li class="flickr"><a href="http://www.flickr.com/photos/sourcesync/">flickr</a></li>		
 						<li class="googleplus"><a href="#">googleplus</a></li>						
 						<li class="linkedin"><a href="http://www.linkedin.com/company/sourcesync-consulting">linkedin</a></li>						
 						<li class="skype"><a href="#">skype</a></li>
 						<li class="twitter"><a href="https://twitter.com/SrcSync">twitter</a></li>						
-						<li class="youtube"><a href="http://www.youtube.com/SourceSync">youtube</a></li>					
+						<li class="youtube"><a href="http://www.youtube.com/SourceSync">youtube</a></li>
 					</ul>
 				</div>
 				<!-- end: Social Sites -->
@@ -327,7 +312,7 @@
 					
 					<h3>Follow Us</h3>
 					
-					<div id="social-r" class="tooltips">											
+					<div id="social-r" class="tooltips">
 						<a href="www.facebook.com" rel="tooltip" title="Facebook" class="facebook">Facebook</a>				
 						<a href="#" rel="tooltip" title="Google Plus" class="googleplus">Google Plus</a>
 						<a href="http://www.linkedin.com/company/sourcesync-consulting" rel="tooltip" title="LinkedIn" class="linkedin">LinkedIn</a>
@@ -376,7 +361,7 @@
 
 							<li><a href="services.html">Services</a></li>
 
-							<li><a href="portfolio.html">Portfolio</a></li>
+							<li><a href="casestudy.html">Case Study</a></li>
 
 							<li><a href="about.html">About</a></li>
 
