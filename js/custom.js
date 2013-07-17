@@ -2,11 +2,37 @@
 
 jQuery(document).ready(function($){
 	
-	$.getJSON('http://api.twitter.com/1/statuses/user_timeline/SrcSync.json?count=3&callback=?', function(tweets){
+	$.getJSON('http://api.twitter.com/1/statuses/user_timeline/lukaszholeczek.json?count=3&callback=?', function(tweets){
 		$("#twitter").html(tz_format_twitter(tweets));
 	}); 
 
 });
+
+/* ------------------- Client Carousel --------------------- */
+
+jQuery(document).ready(function($){
+
+	$('.clients-carousel').flexslider({
+	    animation: "slide",
+		easing: "swing",
+	    animationLoop: true,
+	    itemWidth: 1,
+	    itemMargin: 1,
+	    minItems: 1,
+	    maxItems: 8,
+		controlNav: false,
+		directionNav: false,
+		move: 2
+      });
+
+	$('#flex1').flexslider();
+	
+	$('#flex2').flexslider({
+	    animation: "slide",
+	    controlNav: "thumbnails"
+	 });
+	
+}); 
 
 jQuery(document).ready(function($){
 	
@@ -43,21 +69,6 @@ jQuery(document).ready(function($){
 	})();
 	
 	
-	/* ------------------- Client Carousel --------------------- */
-
-	$('.clients-carousel').flexslider({
-	    animation: "slide",
-		easing: "swing",
-	    animationLoop: true,
-	    itemWidth: 1,
-	    itemMargin: 1,
-	    minItems: 1,
-	    maxItems: 8,
-		controlNav: false,
-		directionNav: false,
-		move: 2
-      });
-
 
 	/* ------------------ Back To Top ------------------- */
 
@@ -103,7 +114,7 @@ jQuery(document).ready(function($){
 
 /* ------------------ Tooltips ----------------- */
 
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
 
     $('.tooltips').tooltip({
       selector: "a[rel=tooltip]"
@@ -138,7 +149,7 @@ jQuery(document).ready(function($){
 
 /* ------------------ Image Overlay ----------------- */
 
-jQuery(document).ready(function () {
+jQuery(document).ready(function($) {
 	
 	$('.picture a').hover(function () {
 		$(this).find('.image-overlay-zoom, .image-overlay-link').stop().fadeTo('fast', 1);
@@ -150,7 +161,7 @@ jQuery(document).ready(function () {
 
 /* -------------------- Isotope --------------------- */
 
-jQuery(document).ready(function () {
+jQuery(document).ready(function($) {
 	
 	$('#portfolio-wrapper').imagesLoaded(function() {
 		
@@ -225,4 +236,3 @@ jQuery(document).ready(function () {
 	});
 	
 });
-
