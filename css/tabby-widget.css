@@ -1,0 +1,176 @@
+/*!
+ * Tabby widget is built for Bootstrap
+ *
+ * Yair Tal
+ * http://www.fiverr.com/yair_t
+ *
+ * Built with all the love in the world by @yair_tal.
+ */
+
+/* start: Clear style.css out of the way */
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #e0dfdf;
+    border-bottom: 1px solid #fcfcfc;
+}
+
+.tabby-widget .widget {
+    background: transparent;
+}
+
+.tabby-widget .nav {
+    float: none;
+    background: none !important;
+    filter: none !important;
+    border: none;
+    box-shadow: none;
+    padding: 0px;
+    margin: 0;
+}
+
+.tabby-widget .nav > li > a {
+    border-top:none;
+    text-shadow: none;
+    font-size: 16px;
+    padding: 0px;
+    transition: none;
+    background-color: #eeeeee;
+    color: #596c79;
+
+}
+
+.tabby-widget .nav > li > a:focus,
+.tabby-widget .nav > li > a:hover {
+    border: 0;
+    background-color: #ffffff;
+    color: #f16529 !important;
+}
+
+.tabby-widget .nav > .active > a,
+.tabby-widget .nav > .active > a:focus {
+    text-decoration: none;
+    border-top:0px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #384C58;
+    background: #ffffff;
+}
+
+.tabby-widget .nav > .active > a:hover {
+    border-top:none !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #384C58;
+    background: #ffffff;
+}
+
+.tabby-widget {
+    margin-top: 10px;
+}
+
+/* end: Clear style.css out of the way */
+
+/* Tabby-widget begins here */
+
+.tabby-widget {
+    box-sizing: border-box;
+}
+
+.tabby-widget .nav-tabs {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.tabby-widget .nav-tabs > li > a {
+    width: 128px; /* if you change the number of tabs / span size, you better change this */
+    text-align: center;
+    background-color: #eeeeee;
+    color: #596c79;
+    padding: 10px 10px 10px 10px;
+    margin-right: 4px;
+    border: 0;
+    border-radius: 0;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.tabby-widget .nav-tabs > li > a.lasttab {
+    margin-right: -4px;
+}
+
+.tabby-widget .nav-tabs > li > a:hover,
+.tabby-widget .nav-tabs > li > a:focus {
+    border: 0;
+    background-color: #ffffff;
+}
+
+.tabby-widget .nav-tabs > li.active > a {
+    color: #384C58;
+    background: #ffffff;
+}
+
+.tabby-widget .nav-tabs > li.active  {
+    margin-top: -15px;
+}
+.tabby-widget .nav-tabs > li.active > a {
+    padding-top: 25px;
+}
+
+.tabby-widget .tab-content {
+    display: block;
+    width: auto;
+    background: #ffffff;
+    padding: 30px 30px 30px;
+    border-top: 0;
+    border-radius: 0 0 4px 4px;
+}
+
+.tabby-widget .tab-inner ul li {
+    padding: 0;
+    margin: 0;
+}
+
+/* Tabby-widget ends here */
+
+.mar-b-10 {
+    margin-bottom: 10px;
+}
+.mar-b-20 {
+    margin-bottom: 20px;
+}
+.mar-b-30 {
+    margin-bottom: 30px;
+}
+.mar-b-40 {
+    margin-bottom: 40px;
+}
+
+.mar-t-10{
+    margin-top: 10px;
+}
+.mar-t-20{
+    margin-top: 20px;
+}
+.mar-t-30{
+    margin-top: 30px;
+}
+.mar-t-40{
+    margin-top: 40px;
+}
+
+.no-mar-left {
+    margin-left: 0px;
+}
+
+.no-mar-right {
+    margin-right: 0px;
+}
+
+.no-padding {
+    padding: 0px;
+}
+

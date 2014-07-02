@@ -1,4 +1,5 @@
 /*
+/*
 * Author: Łukasz Holeczek
 * Template: Magnus Bootstrap Theme
 * Version: 1.0.3
@@ -97,8 +98,8 @@ a {
 	border-bottom: 3px solid #f6f6f6 !important;
 	margin-bottom: -2px !important;
 	display: inline-block !important;
-	padding: 0px 10px !important;
-	margin-left:15px !important;
+	padding: 0px 0px !important;
+	margin-left:0px !important;
 	margin-right:15px !important;
 }
 
@@ -164,6 +165,22 @@ a {
 
 .box:hover {
 	margin-top: -5px;
+    background-color: #222;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: relative;
+    z-index: 40;
+    background: rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    cursor: pointer;
+    background-image: url(../img/overlay-icon-01.png);
 }
 
 .contact {
@@ -709,15 +726,34 @@ html[xmlns] .slides {display: block;}
 }
 
 .icons-box:hover {
-	background: #fcfcfc;
-	border: 1px solid #f6f6f6;
+    z-index: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #222;
+    background: rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    cursor: pointer;
+    background-image: url(../img/link-2-48.png);
 }
+
+.icons-box:hover i {
+    opacity: 0.1;
+}
+
 
 .icons-box h3 {
 	margin: 0 auto;
 	padding-top: 10px;
 	border-bottom: 3px double #f6f6f6;
 	margin-bottom: 10px;
+}
+
+.icons-box:hover h3 {
+    opacity: 0.2;
 }
 
 .icons-box p {
@@ -728,6 +764,7 @@ html[xmlns] .slides {display: block;}
 	float: left;
 	margin: -2px 0 0px 0;
 }
+
 
 .icons-box i.circle {
 	float: none !important;
@@ -1935,6 +1972,10 @@ li.current {
 .circle_list  li {background: url(../img/icons/list/orange/list_circle.png) no-repeat 0% 50%; padding: 0 0 0 16px;}
 .cross_list  li {background: url(../img/icons/list/orange/list_cross.png) no-repeat 0% 50%; padding: 0 0 0 16px;}
 
+.check_list li h4,
+.check_list p {
+    padding-left: 18px;
+}
 
 /* Footer
 ====================================================================== */
@@ -2167,6 +2208,7 @@ form#newsletter input[type=submit] {
 
 #copyright {
 	padding: 20px 0px;
+    background: url(../img/bg2.jpg);
 }
 
 #copyright p {
@@ -2699,4 +2741,39 @@ form#newsletter input[type=submit] {
 	
 	
 }
-	
+
+/* PDF Download
+====================================================================== */
+.guideDownload .media-heading {
+    color: #f16529;
+}
+
+.mar-b-10 {
+    margin-bottom: 10px;
+}
+.mar-b-20 {
+    margin-bottom: 20px;
+}
+.mar-b-30 {
+    margin-bottom: 30px;
+}
+.mar-b-40 {
+    margin-bottom: 40px;
+}
+
+.mar-t-10{
+    margin-top: 10px;
+}
+.mar-t-20{
+    margin-top: 20px;
+}
+.mar-t-30{
+    margin-top: 30px;
+}
+.mar-t-40{
+    margin-top: 40px;
+}
+
+.no-mar-left {
+    margin-left: 0px;
+}
