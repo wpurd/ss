@@ -71,7 +71,7 @@
 	font-family: 'Economica', Arial, sans-serif !important;
 	font-weight: 700;
 	padding: 100px 20px;
-	margin-left: 0px;
+	margin-left: -20px;
 	position: absolute;
 	z-index: 5;
 }
